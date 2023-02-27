@@ -1,6 +1,0 @@
-# Redireciona domínio antigo para novo domínio
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^https://photos.google.com/share/AF1QipPw9qfS4BwN2M6bfsRdEkxD1g8Q25EkdCkG6gEMZktu1m29xm2lXNOckAu8n8QxEQ?key=LXd0dHZUeTQ4YkphOU9iRUc2YW1ScU5UZzFKYTFR [NC]
-RewriteRule ^(.*)$  [L,R=301]
-</IfModule>
