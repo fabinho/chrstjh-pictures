@@ -1,0 +1,14 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+RewriteEngine on
+RedirectMatch 404 /modules/(.+)/templates/
+RedirectMatch 404 /modules/(.+)/configs/
+
+RewriteRule ^(noticias)/(categoria)/(.+)/$ /index.php?page=$1&categoria=$3 [NC,QSA,L]
+RewriteRule ^(noticias)/(.+)/$ /index.php?page=$1&id=$2 [NC,QSA,L]
+RewriteRule ^(produto)/(.+)$ /index.php?page=$1&id=$2 [NC,QSA,L]
+RewriteRule ^(pesquisa)/(.+)/(.+)/$ /index.php?page=$1&cat=$2&pid=$3 [NC,QSA,L]
+RewriteRule ^(pesquisa)/(.+)/$ /index.php?page=$1&cat=$2 [NC,QSA,L]
+RewriteRule ^(.+)/$ /index.php?page=$1 [NC,QSA,L]
+RewriteRule ^(.+)\.(do)$ /index.html [NC,QSA,L]
